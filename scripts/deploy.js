@@ -74,19 +74,17 @@ const main = async () => {
 
 	let txn;
 
-	for (let index = 0; index < characters.length; index++) {
-		txn = await gameContract.mintCharacterNFT(1)
-		await txn.wait()
-		txn = await gameContract.attackBoss();
-		await txn.wait()
-	}
+	// // for (let index = 0; index < characters.length; index++) {
+	// 	txn = await gameContract.mintCharacterNFT(1)
+	// 	await txn.wait()
+	// 	console.log("Mintou NFT x#",  1);
+	// 	txn = await gameContract.attackBoss();
+	// 	await txn.wait()
+	// // }
 
 
 
 	console.log('Fim do deploy e mint')
-
-	// let returnedTokenUri = await gameContract.tokenURI(1);
-	// console.log("Token URI: ",returnedTokenUri)
 };
 
 const runMain = async () => {
